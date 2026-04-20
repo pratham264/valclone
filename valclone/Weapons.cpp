@@ -24,5 +24,5 @@ void Weapons::showWeapons() {
         cout << i + 1 << ". " << names[i]
              << " (" << prices[i] << ")\n";
     }
-    cout << "0. Move to next round\n"; // ✅ UPDATED
+    cout << "0. Move to next round\n"; 
 }
