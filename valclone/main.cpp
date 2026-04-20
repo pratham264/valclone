@@ -4,7 +4,6 @@
 
 using namespace std;
 
-// SAFE INPUT
 int getIntInput() {
     int x;
     while (!(cin >> x)) {
@@ -55,7 +54,7 @@ int main() {
             cout << "Enter choice: ";
             int choice = getIntInput();
 
-            if (choice == 0) break; // ✅ move to next round
+            if (choice == 0) break; 
 
             store.buy(player, choice);
         }
