@@ -1,1 +1,2 @@
-# valclone
+# valclone 
+my simple val buying phase
