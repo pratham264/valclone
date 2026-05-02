@@ -5,19 +5,20 @@
 using namespace std;
 
 class Player {
-public:
+private:
     int balance;
     string inventory[20];
     int invSize;
 
+public:
     Player(int b);
 
-    void showBalance();
+    void showBalance() const;
     void addWeapon(string weapon);
-    void showInventory();
-    bool canAfford(int price);
-    void deduct(int price);
-    void reward(int amount);
+    void showInventory() const;
+    bool canAfford(int price) const;
+    void deductBalance(int price);   // renamed from deduct
+    void addBalance(int amount);     // renamed from reward
 };
 
 #endif
