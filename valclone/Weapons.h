@@ -1,15 +1,18 @@
-#ifndef STORE_H
-#define STORE_H
+#ifndef WEAPONS_H
+#define WEAPONS_H
 
-#include "Player.h"
-#include "Weapons.h"
+#include "Weapon.h"
 
-class Store {
+class Weapons {
+private:
+    Weapon weapons[8];
+    int count;
+
 public:
-    Weapons w;
-
-    void showMenu();
-    void buy(Player &p, int choice);
+    Weapons();
+    void showWeapons() const;
+    Weapon getWeapon(int index) const;
+    int getCount() const;
 };
 
 #endif
