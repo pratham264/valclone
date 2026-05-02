@@ -1,15 +1,16 @@
 #ifndef STORE_H
 #define STORE_H
 
-#include "Player.h"
 #include "Weapons.h"
+#include "Player.h"
 
 class Store {
-public:
+private:
     Weapons w;
 
+public:
     void showMenu();
-    void buy(Player &p, int choice);
+    void buy(Player& p, int choice);
 };
 
 #endif
