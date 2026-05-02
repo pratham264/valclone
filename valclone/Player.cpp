@@ -1,40 +1,30 @@
 #include "Player.h"
 
-Player::Player(int b) {
-    balance = b;
-    invSize = 0;
-}
+Player::Player(int b) : balance(b), invSize(0) {}
 
-void Player::showBalance() {
-    cout << "Balance: " << balance << endl;
+void Player::showBalance() const {
+    cout << "Balance: " << balance << "\n";
 }
 
 void Player::addWeapon(string weapon) {
-    if (invSize < 20) {
+    if (invSize < 20)
         inventory[invSize++] = weapon;
-    }
 }
 
-void Player::showInventory() {
-    cout << "Inventory: ";
-    if (invSize == 0) cout << "Empty";
-    else {
-        for (int i = 0; i < invSize; i++) {
-            cout << inventory[i] << " ";
-        }
-    }
-    cout << endl;
+void Player::showInventory() const {
+    for (int i = 0; i < invSize; i++)
+        cout << inventory[i] << "\n";
 }
 
-bool Player::canAfford(int price) {
+bool Player::canAfford(int price) const {
     return balance >= price;
 }
 
-void Player::deduct(int price) {
+void Player::deductBalance(int price) {
     balance -= price;
-    cout << "Remaining Balance: " << balance << endl;
+    cout << "Remaining Balance: " << balance << "\n";
 }
 
-void Player::reward(int amount) {
+void Player::addBalance(int amount) {
     balance += amount;
 }
